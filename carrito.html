@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="carrito.css"> <!-- Vincula el archivo de estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="carrito-header">
+        <h1>Carrito de compras</h1>
+        <a href="productos.html" class="btn btn-primary">Volver a productos</a>
+    </header>
+
+    <main class="carrito-page">
+        <div id="cart-items" class="carrito-items">
+            <!-- Aquí se listarán los productos -->
+        </div>
+        <div id="total" class="carrito-total">
+            <!-- Aquí se mostrará el total -->
+        </div>
+
+        <div class="carrito-buttons">
+            <button class="button" id="checkoutBtn">Finalizar compra</button>
+            <button class="button-secondary" id="clearCartBtn">Vaciar carrito</button>
+        </div>
+    </main>
+
+    <script>
+        const cartContainer = document.getElementById('cart-items');
+        const totalContainer = document.getElementById('total');
+        const clearCartBtn = document.getElementById('clearCartBtn');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        } else {
+            cart.forEach(item => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('carrito-item');
+                productElement.innerHTML = `
+                    <div class="item-info">
+                        <span>${item.name}</span>
+                        <span>${item.price}</span>
+                    </div>
+                    <span class="remove-item" data-name="${item.name}">Eliminar</span>
+                `;
+                cartContainer.appendChild(productElement);
+                total += parseFloat(item.price.replace('$', '').replace(',', '.')); // Ajusta el formato de precio
+            });
+
+            totalContainer.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>`;
+        }
+
+        clearCartBtn.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            window.location.reload();
+        });
+
+        checkoutBtn.addEventListener('click', () => {
+            alert('Proceso de compra finalizado');
+            localStorage.removeItem('cart');
+            window.location.reload();
+        });
+
+        const removeItemBtns = document.querySelectorAll('.remove-item');
+        removeItemBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-name');
+                const updatedCart = cart.filter(item => item.name !== productName);
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                window.location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

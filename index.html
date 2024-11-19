@@ -43,17 +43,17 @@
 
                     <nav class="hm-menu">
                         <ul>
-                            <li><a href="http://">Productos</a></li>
-                            <li><a href="http://">Nosotros</a></li>
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
                         </ul>
 
 
                         <div class="hm-icon-cart">
-                            <a href="#">
+                            <a href="carrito.html">
                                 <i class="las la-shopping-cart"></i>
-                                <span>0</span>
+                                <span id="cart-count">0</span>
                             </a>
-                        </div>
+                        </div>                        
 
                         <div class="icon-menu">
                             <button type="button"><i class="fas fa-bars"></i></button>
@@ -72,8 +72,8 @@
         <div class="header-menu-movil">
             <button class="cerrar-menu"><i class="fas fa-times"></i></button>
             <ul>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </div>
 
@@ -113,7 +113,7 @@
                         <a href="#">
                             <img src="img/c-2.jpg" alt="">
                             <div class="c-info">
-                                <h3>Todo a la moda</h3>
+                                <h3>Todo a la Geekbar</h3>
                             </div>
                         </a>
                     </div>
@@ -122,7 +122,7 @@
                         <a href="#">
                             <img src="img/c-3.jpg" alt="">
                             <div class="c-info">
-                                <h3>Lo mejor en tecnología</h3>
+                                <h3>Lo mejor en Fume</h3>
                             </div>
                         </a>
                     </div>
@@ -156,15 +156,15 @@
                 <!-- TABS -->
                 <ul class="hm-tabs" data-aos="fade-up">
                     <li class="hm-tab-link">
-                        Zapatillas
+                        Ignite
                     </li>
 
                     <li class="hm-tab-link ">
-                        Moda
+                        Geekbar
                     </li>
 
                     <li class="hm-tab-link ">
-                        Tecnología
+                        Fume
                     </li>
 
                     <li class="hm-tab-link ative">
@@ -174,7 +174,7 @@
                 </ul>
 
                 <!-- CONTENIDO DE LOS TABS -->
-                <!-- Zapatillas -->
+                <!-- Ignite -->
                 <div class="tabs-content" data-aos="fade-up">
 
                     <div class="grid-product">
@@ -192,7 +192,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -209,7 +209,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -226,7 +226,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -244,7 +244,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -253,7 +253,7 @@
 
                 </div>
 
-                <!-- Moda -->
+                <!-- Geekbar -->
                 <div class="tabs-content" data-aos="fade-up">
 
                     <div class="grid-product">
@@ -271,7 +271,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -289,7 +289,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -306,7 +306,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -323,7 +323,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -332,7 +332,7 @@
 
                 </div>
 
-                <!-- Tecnología -->
+                <!-- Fume -->
                 <div class="tabs-content" data-aos="fade-up">
 
                     <div class="grid-product">
@@ -350,7 +350,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -367,7 +367,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -384,7 +384,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -401,7 +401,7 @@
                                 <div class="precio">
                                     <span>$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -429,7 +429,7 @@
                                     <span>$1.000</span>
                                     <span class="thash">$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -448,7 +448,7 @@
                                     <span>$1.000</span>
                                     <span class="thash">$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -468,7 +468,7 @@
 
                                     <span class="thash">$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -487,7 +487,7 @@
                                     <span>$1.000</span>
                                     <span class="thash">$1.000</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                <button class="hm-btn btn-primary uppercase" data-role="add-to-cart">Agregar al carrito</button>
                             </div>
 
                         </div>
@@ -521,11 +521,38 @@
     <script src="js/app.js"></script>
 
     <script>
+        let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        document.getElementById('cart-count').innerText = cartCount;
     
+        document.querySelectorAll('[data-role="add-to-cart"]').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                localStorage.setItem('cartCount', cartCount);
+                document.getElementById('cart-count').innerText = cartCount;
+            });
+        });
+    </script>
+
+    <script>
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    document.querySelectorAll('[data-role="add-to-cart"]').forEach(button => {
+        button.addEventListener('click', () => {
+            const productCard = button.closest('.card'); // Cambiar según tu estructura
+            const productName = productCard.querySelector('.product-name').innerText; // Cambiar '.product-name' según tu HTML
+            const productPrice = productCard.querySelector('.product-price').innerText; // Cambiar '.product-price' según tu HTML
+
+            cartItems.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+        });
+    });
+    </script>
+
+    <script>
+
         AOS.init({
             duration: 1200,
         })
-
 
     </script>
 

@@ -1,0 +1,136 @@
+/* Establecer la tipografía general */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos generales para el carrito */
+.carrito-wrapper {
+    padding: 50px 0;
+}
+
+.carrito-page {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.carrito-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrito-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.carrito-header h1 {
+    font-family: 'Montserrat', sans-serif; /* Encabezado con Montserrat */
+    font-size: 36px;
+    color: #333;
+}
+
+.carrito-items {
+    margin-top: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.carrito-item .item-info {
+    flex: 1;
+}
+
+.carrito-item h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500; /* Peso de fuente más claro para mayor legibilidad */
+}
+
+.carrito-item .precio {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #888;
+}
+
+.carrito-item .remove-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #ff4747;
+    cursor: pointer;
+}
+
+.carrito-item .remove-item:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el total del carrito */
+.carrito-total {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.carrito-total h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carrito-total .total-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #333;
+}
+
+.carrito-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carrito-buttons .button {
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.carrito-buttons .button:hover {
+    background-color: #d93d3d;
+}
+
+.carrito-buttons .button-secondary {
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;}
+
+.carrito-buttons .button-secondary:hover {
+    background-color: #222;
+}

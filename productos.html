@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Productos - Vapo Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="productos-wrapper">
+
+        <div class="hm-header">
+            <div class="container">
+                <div class="header-menu">
+                    <div class="hm-logo">
+                        <a href="index.html">
+                            <img src="img/image.png" alt="">
+                        </a>
+                    </div>
+                    <nav class="hm-menu">
+                        <ul>
+                            <li><a href="productos.html" class="active">Productos</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                        </ul>
+                        <div class="hm-icon-cart">
+                            <a href="carrito.html">
+                                <i class="las la-shopping-cart"></i>
+                                <span>0</span>
+                            </a>
+                        </div>
+                        <div class="icon-menu">
+                            <button type="button"><i class="fas fa-bars"></i></button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="productos-page">
+            <div class="container">
+                <div class="header-title">
+                    <h1 data-aos="fade-up">Nuestros Productos</h1>
+                </div>
+                <div class="grid-product">
+                    <div class="product-item" data-aos="fade-up">
+                        <div class="p-portada">
+                            <a href="#">
+                                <img src="img/1.jpg" alt="Producto 1">
+                            </a>
+                            <span class="stin stin-new">Nuevo</span>
+                        </div>
+                        <div class="p-info">
+                            <a href="#"><h3>Vapo 1</h3></a>
+                            <div class="precio">
+                                <span>$1.000</span>
+                            </div>
+                            <a href="#" class="hm-btn btn-primary uppercase" data-id="vapo1" data-name="Vapo 1" data-price="1000">AGREGAR AL CARRITO</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-aos="fade-up">
+                        <div class="p-portada">
+                            <a href="#">
+                                <img src="img/2.jpg" alt="Producto 2">
+                            </a>
+                            <span class="stin stin-oferta">Oferta</span>
+                        </div>
+                        <div class="p-info">
+                            <a href="#"><h3>Vapo 2</h3></a>
+                            <div class="precio">
+                                <span>$900</span>
+                            </div>
+                            <a href="#" class="hm-btn btn-primary uppercase" data-id="vapo2" data-name="Vapo 2" data-price="900">AGREGAR AL CARRITO</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-aos="fade-up">
+                        <div class="p-portada">
+                            <a href="#">
+                                <img src="img/3.jpg" alt="Producto 3">
+                            </a>
+                        </div>
+                        <div class="p-info">
+                            <a href="#"><h3>Vapo 3</h3></a>
+                            <div class="precio">
+                                <span>$1.200</span>
+                            </div>
+                            <a href="#" class="hm-btn btn-primary uppercase" data-id="vapo3" data-name="Vapo 3" data-price="1200">AGREGAR AL CARRITO</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-aos="fade-up">
+                        <div class="p-portada">
+                            <a href="#">
+                                <img src="img/4.jpg" alt="Producto 4">
+                            </a>
+                        </div>
+                        <div class="p-info">
+                            <a href="#"><h3>Vapo 4</h3></a>
+                            <div class="precio">
+                                <span>$1.100</span>
+                            </div>
+                            <a href="#" class="hm-btn btn-primary uppercase" data-id="vapo4" data-name="Vapo 4" data-price="1100">AGREGAR AL CARRITO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hm-footer">
+            <div class="container">
+                <p>© 2024 Vapo Hub. Todos los derechos reservados.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        document.querySelector('.hm-icon-cart span').textContent = cartCount;
+
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCartCount() {
+            document.querySelector('.hm-icon-cart span').textContent = cartCount;
+            localStorage.setItem('cartCount', cartCount);
+        }
+
+        function addToCart(id, name, price) {
+            cartCount++;
+            cartItems.push({ id, name, price });
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            updateCartCount();
+        }
+
+        document.querySelectorAll('.hm-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const id = e.target.getAttribute('data-id');
+                const name = e.target.getAttribute('data-name');
+                const price = e.target.getAttribute('data-price');
+                addToCart(id, name, price);
+            });
+        });
+    </script>
+</body>
+</html>
